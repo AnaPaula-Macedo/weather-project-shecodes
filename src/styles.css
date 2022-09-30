@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+.container {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border: 1px solid white;
+
+  border-radius: 10px;
+
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 650px;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+
+input {
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 1px;
+}
+
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: left;
+}
+
+.container {
+  text-align: center;
+}
+.cloud-icon {
+  font-size: 100px;
+}
+
+.heat {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
