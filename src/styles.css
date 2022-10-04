@@ -44,3 +44,12 @@ input {
   font-weight: 400;
   line-height: 1;
 }
+
+.coder {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  margin-left: 665px;
+  font-size: 15px;
+}
