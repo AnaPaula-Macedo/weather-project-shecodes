@@ -46,10 +46,12 @@ input {
 }
 
 .coder {
-  color: #007bff;
   text-decoration: none;
   background-color: transparent;
   display: block;
   margin-left: 665px;
   font-size: 15px;
+}
+a {
+  color: #007bff;
 }
