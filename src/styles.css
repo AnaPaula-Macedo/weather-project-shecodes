@@ -4,11 +4,9 @@ body {
 }
 
 .container {
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  border: 1px solid white;
-
+  background-color: white;
+  border: none;
   border-radius: 10px;
-
   padding: 15px;
   margin: 20px auto;
   max-width: 650px;
@@ -22,14 +20,17 @@ body {
   border: none;
 }
 .search-button {
-  background-color: #b8e2f7;
+  background-color: #d1e9f5;
   color: snow;
   padding: 5px 50px;
   border: none;
   font-size: 16px;
-  cursor: pointer;
   text-align: center;
-  transition: ease-in-out, #5585b5, 15s;
+  transition: all 200ms ease-in-out;
+}
+.search-button:hover {
+  color: #0d2e4f;
+  cursor: pointer;
 }
 .search {
   margin-bottom: 20px;
