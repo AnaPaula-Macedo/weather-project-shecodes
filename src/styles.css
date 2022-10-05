@@ -21,7 +21,16 @@ body {
   color: #cfccd8;
   border: none;
 }
-
+.search-button {
+  background-color: #b8e2f7;
+  color: snow;
+  padding: 5px 50px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: ease-in-out, #5585b5, 15s;
+}
 .search {
   margin-bottom: 20px;
 }
