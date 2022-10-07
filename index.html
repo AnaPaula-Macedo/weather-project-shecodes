@@ -11,10 +11,10 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
     <script
@@ -38,21 +38,21 @@
        
       </form>
       <h1 id="cities">Berlin</h1>
-      <div class="row">
-        <div class="col align-left" id="date"></div>
+      <div class="WeatherFirstInfo row">
+        <div class="col weatherDate" id="date"></div>
         <div class="col"></div>
-        <div class="col align-right" id="description"></div>
+        <div class="col weatherDescription" id="description"></div>
       </div>
-      <i class="fa-solid fa-cloud-sun cloud-icon"></i>
-      <div class="row">
-        <span class="col align-left">Humidity:<span id="humidity"></span>%</span>
-        <span class="col heat" id="temperature">19</span>
-        <span class="col units"> 
+       <i class="fa-solid fa-cloud-sun cloud-icon"></i>
+      <div class="WeatherSecondInfo row">
+        <span class="col weatherHumidity ">Humidity:<span id="humidity"></span>%</span>
+        <span class="col weatherHeat" id="temperature">19</span>
+        <span class="col weatherUnits"> 
           <a href="#" id="celsius-link">˚C</a>
           "|"
           <a href="#" id="fahrenheit-link">˚F</a>
         </span>
-        <span class="col align-right">Wind:<span id="wind"></span>km/h</span>
+        <span class="col weatherWind">Wind:<span id="wind"></span>km/h</span>
         <br/>
     
         </div>
