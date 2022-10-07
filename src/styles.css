@@ -11,6 +11,12 @@ body {
   margin: 20px auto;
   max-width: 650px;
 }
+.search {
+  margin-bottom: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #f9f7fe;
+}
+
 .forma-control {
   padding: 10px 160px 10px 10px;
   background-color: #edf7f9;
@@ -32,9 +38,6 @@ body {
   background-color: #4d83ba;
   color: white;
   cursor: pointer;
-}
-.search {
-  margin-bottom: 20px;
 }
 
 input {
