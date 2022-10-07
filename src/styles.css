@@ -44,13 +44,6 @@ input {
   border-radius: 6px;
 }
 
-.align-right {
-  text-align: right;
-}
-.align-left {
-  text-align: left;
-}
-
 .container {
   text-align: center;
 }
@@ -63,8 +56,14 @@ input {
   padding-bottom: 25px;
   border-bottom: 1px solid #f9f7fe;
 }
+.WeatherFirstInfo {
+  padding: 10px 25px;
+}
+.WeatherSecondInfo {
+  padding: 15px 25px;
+}
 
-.heat {
+.weatherHeat {
   color: rgb(33, 33, 33);
   font-size: 50px;
   font-weight: 400;
@@ -75,7 +74,7 @@ input {
   text-decoration: none;
   background-color: transparent;
   display: block;
-
+  text-align: center;
   font-size: 14px;
 }
 a {
