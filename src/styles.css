@@ -3,6 +3,24 @@ body {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
+input {
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  margin-block: 0px;
+}
+
+a {
+  color: #007bff;
+}
+
 .container {
   background-color: white;
   border: none;
@@ -22,12 +40,12 @@ body {
   background-color: #edf7f9;
   text-align: left;
   font-size: 16px;
-  color: #cfccd8;
+  color: #5f5972;
   border: none;
 }
 .search-button {
   background-color: #d1e9f5;
-  color: snow;
+  color: rgb(135, 135, 135);
   padding: 10px 50px;
   border: none;
   font-size: 16px;
@@ -40,15 +58,12 @@ body {
   cursor: pointer;
 }
 
-input {
-  border-radius: 6px;
-}
-
 .container {
   text-align: center;
 }
-.cloud-icon {
-  font-size: 100px;
+
+.center-icon {
+  font-size: 70px;
 }
 
 .WeatherForecast {
@@ -56,18 +71,39 @@ input {
   padding-bottom: 25px;
   border-bottom: 1px solid #f9f7fe;
 }
+
 .WeatherFirstInfo {
   padding: 10px 25px;
+  color: rgb(135, 135, 135);
+  font-size: 18px;
 }
+
 .WeatherSecondInfo {
   padding: 15px 25px;
 }
-
+.weatherHumidity {
+  color: rgb(135, 135, 135);
+  font-size: 18px;
+}
 .weatherHeat {
   color: rgb(33, 33, 33);
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 1;
+}
+.weatherUnits {
+  color: rgb(12, 11, 11);
+  font-size: 15px;
+  position: absolute;
+  margin-left: -243px;
+}
+.weatherWind {
+  color: rgb(135, 135, 135);
+  font-size: 18px;
+}
+
+.icon {
+  margin: 20px;
 }
 
 .coder {
@@ -76,7 +112,4 @@ input {
   display: block;
   text-align: center;
   font-size: 14px;
-}
-a {
-  color: #007bff;
 }
