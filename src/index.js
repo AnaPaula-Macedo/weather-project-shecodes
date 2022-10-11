@@ -21,7 +21,6 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[weekDays];
-
   return `${day} ${hours}:${minutes}`;
 }
 
