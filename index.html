@@ -25,18 +25,20 @@
   </head>
   <body>
     <div class="container">
+
       <form class="search" id="search-form">
       <input
        type="search" 
        placeholder="Enter a city..." 
        class="forma-control"
-       id="city-input" />
+       id="city-input"
+       autocomplete="off" />
         <input 
         type="submit" 
         value="Search"
         class="search-button" />
-       
       </form>
+
       <h1 id="cities">Berlin</h1>
       <div class="WeatherFirstInfo row">
         <div class="col weatherDate" id="date"></div>
@@ -44,10 +46,14 @@
         <div class="col weatherDescription" id="description">Cloud</div>
       </div>
        <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="Clear" id="icon" class="center-icon" />
-      <div class="WeatherSecondInfo row">
+      
+       <div class="WeatherSecondInfo row">
         <span class="col weatherHumidity ">Humidity: <span id="humidity"></span>%</span>
-        <span class="col weatherHeat" id="temperature">19</span><span class="weatherUnits"><strong>°C|°F</strong></span>
-       
+        <div class="col"></div>
+        <span class="col weatherHeat" id="temperature">19</span><span class="col weatherUnits"><a href="#" id="celsius-link" class="celsiusLink">˚C</a>
+          |
+          <a href="#" id="fahrenheit-link" class="fahrenheitLink">˚F</a></span>
+        <div class="col"></div>
         <span class="col weatherWind">Wind: <span id="wind"></span>m/h</span>
         <br/>
     

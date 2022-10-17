@@ -47,6 +47,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -57,8 +59,8 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
+  let cityInputElement = document.querySelector("#city-input");
+  searchCity(cityInputElement.value);
 }
 
 function showLocation(position) {
@@ -72,27 +74,47 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-searchCity("Berlin");
+//let currentLocationButton = document.querySelector("#current-location-button");
+//currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//Homework Week 5
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Berlin");
 
 // !!!Bonus Feature( About the Homework of week 4)
 //function convertFahrenheit(event) {
 // event.preventDefault();
 // let temperatureElement = document.querySelector("#temperature");
-//  temperatureElement.innerHTML = 99;}
+// temperatureElement.innerHTML = 99;}
 
 //let fahrenheitLink = document.querySelector("#fahrenheit-link");
 //fahrenheitLink.addEventListener("click", convertFahrenheit);
 
 //function convertCelsius(event) {
-//  event.preventDefault();
-//  let temperatureElement = document.querySelector("#temperature");
-//  temperatureElement.innerHTML = 36;}
+// event.preventDefault();
+// let temperatureElement = document.querySelector("#temperature");
+// temperatureElement.innerHTML = 36;}
 
 //let celsiusLink = document.querySelector("#celsius-link");
 //celsiusLink.addEventListener("click", convertCelsius);

@@ -62,8 +62,9 @@ a {
   text-align: center;
 }
 
-.center-icon {
-  font-size: 70px;
+.center-icon img {
+  height: 80px;
+  width: 80px;
 }
 
 .WeatherForecast {
@@ -84,6 +85,16 @@ a {
 .WeatherSecondInfo {
   padding: 15px 25px;
 }
+.WeatherSecondInfo .celsiusLink {
+  color: rgb(33, 33, 33);
+  text-decoration: none;
+}
+
+.WeatherSecondInfo .fahrenheitLink {
+  color: rgb(33, 33, 33);
+  text-decoration: none;
+}
+
 .weatherHumidity {
   color: rgb(135, 135, 135);
   font-size: 18px;
@@ -92,13 +103,14 @@ a {
   color: rgb(33, 33, 33);
   font-size: 40px;
   font-weight: 400;
+  padding-right: 0px;
   line-height: 1;
 }
 .weatherUnits {
   color: rgb(12, 11, 11);
   font-size: 15px;
-  position: absolute;
-  margin-left: -243px;
+  display: flex;
+  padding-left: 0px;
 }
 .weatherWind {
   color: rgb(135, 135, 135);
