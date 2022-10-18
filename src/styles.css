@@ -11,16 +11,6 @@ h1 {
   font-size: 40px;
 }
 
-p {
-  color: rgb(135, 135, 135);
-  font-size: 16px;
-  margin-block: 0px;
-}
-
-a {
-  color: #007bff;
-}
-
 .container {
   background-color: white;
   border: none;
@@ -67,10 +57,23 @@ a {
   width: 80px;
 }
 
-.WeatherForecast {
+.WeatherForecast row {
   margin-bottom: 15px;
   padding-bottom: 25px;
   border-bottom: 1px solid #f9f7fe;
+}
+.weather-forecast-date {
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  margin-block: 0px;
+}
+.weather-forecast-temperature {
+  color: rgb(135, 135, 135);
+  font-size: 13px;
+  margin-block: 0px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 
 .WeatherFirstInfo {
