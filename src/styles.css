@@ -57,7 +57,7 @@ h1 {
   width: 80px;
 }
 
-.WeatherForecast row {
+.weather-forecast {
   margin-bottom: 15px;
   padding-bottom: 25px;
   border-bottom: 1px solid #f9f7fe;
