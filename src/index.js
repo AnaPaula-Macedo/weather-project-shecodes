@@ -24,6 +24,32 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `          
+      <div class="col">
+       <div class="weather-forecast-date">${day}</div>
+          <i class="fa-solid fa-cloud icon"></i>
+           <div class="weather-forecast-temperature">
+           <span class="weather-forecast-temperature-max">
+            20˚ </span>
+            <span class="weather-forecast-temperature-min">
+            18˚</span>
+           </div>
+       </div>
+     `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
@@ -101,7 +127,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Berlin");
-
+displayForecast();
 // !!!Bonus Feature( About the Homework of week 4)
 //function convertFahrenheit(event) {
 // event.preventDefault();
