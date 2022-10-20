@@ -24,7 +24,8 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -54,6 +55,13 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "51of39c064736bf053t4b77f995abaf9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 //Homework Week 5
 function displayWeatherCondition(response) {
   document.querySelector("#cities").innerHTML = response.data.city;
@@ -76,6 +84,8 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.condition.icon);
 
   celsiusTemperature = response.data.temperature.current;
+
+  getForecast(response.data.coordinates);
 }
 
 function searchCity(city) {
@@ -92,7 +102,7 @@ function handleSubmit(event) {
 
 function showLocation(position) {
   let apiKey = "51of39c064736bf053t4b77f995abaf9";
-  let apiUrl = `https://api.shecodes.io/v1/weather/current?query=${position.coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.shecodes.io/v1/weather/current?query=${position.coordinates.latitude}&lon=${position.coordinates.longitude}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -128,20 +138,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Berlin");
-displayForecast();
-// !!!Bonus Feature( About the Homework of week 4)
-//function convertFahrenheit(event) {
-// event.preventDefault();
-// let temperatureElement = document.querySelector("#temperature");
-// temperatureElement.innerHTML = 99;}
-
-//let fahrenheitLink = document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", convertFahrenheit);
-
-//function convertCelsius(event) {
-// event.preventDefault();
-// let temperatureElement = document.querySelector("#temperature");
-// temperatureElement.innerHTML = 36;}
-
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertCelsius);
