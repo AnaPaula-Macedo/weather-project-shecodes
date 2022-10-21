@@ -1,4 +1,3 @@
-// Feature #1
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -77,13 +76,11 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "51of39c064736bf053t4b77f995abaf9";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
-//Homework Week 5
 function displayWeatherCondition(response) {
   document.querySelector("#cities").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -149,8 +146,6 @@ let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
-//let currentLocationButton = document.querySelector("#current-location-button");
-//currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
